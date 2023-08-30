@@ -5,6 +5,7 @@ import com.app.Job_Portal.dto.JobApplicationResponseDto;
 import com.app.Job_Portal.dto.JobListDto;
 import com.app.Job_Portal.dto.JobSeekerRequestDto;
 import com.app.Job_Portal.dto.JobSeekerResponseDto;
+import com.app.Job_Portal.dto.JobSeekerUpdateRequestDto;
 import com.app.Job_Portal.service.JobSeekerService;
 import com.app.Job_Portal.service.ResumeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -168,7 +169,7 @@ public class JobseekerController {
      */
 
     @PutMapping("/update-profile/{jobSeekerId}")
-    public ResponseEntity<String> updateProfile(@PathVariable Long jobSeekerId, @RequestBody @Valid JobSeekerRequestDto seekerDto) {
+    public ResponseEntity<String> updateProfile(@PathVariable Long jobSeekerId, @RequestBody @Valid JobSeekerUpdateRequestDto seekerDto) {
         return new ResponseEntity<String>(jobSeekerService.updateProfile(seekerDto, jobSeekerId), HttpStatus.OK);
     }
 

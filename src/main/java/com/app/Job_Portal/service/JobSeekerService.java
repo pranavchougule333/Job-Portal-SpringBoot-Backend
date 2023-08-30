@@ -5,6 +5,8 @@ import com.app.Job_Portal.dto.JobApplicationResponseDto;
 import com.app.Job_Portal.dto.JobListDto;
 import com.app.Job_Portal.dto.JobSeekerRequestDto;
 import com.app.Job_Portal.dto.JobSeekerResponseDto;
+import com.app.Job_Portal.dto.JobSeekerUpdateRequestDto;
+
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -28,7 +30,7 @@ public interface JobSeekerService {
 
     String createProfile(JobSeekerRequestDto seekerDto);
 
-    String updateProfile(JobSeekerRequestDto seekerDto, Long jobSeekerId);
+    String updateProfile(JobSeekerUpdateRequestDto seekerDto, Long jobSeekerId);
 
     String deleteProfile(Long jobSeekerId);
 

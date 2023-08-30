@@ -280,7 +280,7 @@ System.out.println("req ss");
 
 
     @Override
-    public String updateProfile(JobSeekerRequestDto seekerDto, Long jobSeekerId) {
+    public String updateProfile(JobSeekerUpdateRequestDto seekerDto, Long jobSeekerId) {
 
         JobSeeker seeker = jobSeekerRepo.findById(jobSeekerId).orElseThrow(() -> new ResourceNotFoundException("job seeker with given id not found"));
 
